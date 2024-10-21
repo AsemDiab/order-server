@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 app.use(bodyParser.json());
 
-const CATALOG_SERVICE_URL = 'http://localhost:5001';
+const CATALOG_SERVICE_URL = process.env.CATALOG_URL;;
 const ORDERS_FILE = './orders.json';
 
 // Helper function to record orders
